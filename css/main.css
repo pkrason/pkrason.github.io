@@ -17,6 +17,9 @@ input::placeholder {
     color: rgb(179, 179, 179);
 }
 
+label {
+    font-size: 1.02em;
+}
 
 h1 {
    text-align: center;
@@ -123,6 +126,24 @@ hr.thin {
     margin-left: 5px;
 }
 
+.options-form-elements {
+    width: 140px;
+    padding:4px 6px;
+    color: #424242;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+
+.pole-data-dokumentu {
+    width: 140px;
+    padding:4px 6px;
+    color: #424242;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+}
+
+
 #wrapper {
     margin:0;
 }
@@ -203,6 +224,7 @@ hr.thin {
         width: 57px;
         margin-left: 4px;
     }
+
 }
 
 
@@ -222,7 +244,7 @@ hr.thin {
     width:25%;
     overflow:hidden;
     box-sizing: border-box;
-    padding:95px 70px;
+    padding:40px 40px;
     background-color: #333333;
     height:100vh;
 
@@ -271,7 +293,7 @@ box-shadow: -10px 0px 36px -16px rgba(0,0,0,1);
     background-position: 97% center;
     background-repeat: no-repeat;
     border: 1px solid #AAA;
-    color: #555;
+    color: #424242;
     font-size: 0.8em;
     overflow: hidden;
     text-overflow: ellipsis;
