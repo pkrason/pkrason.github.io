@@ -43,10 +43,15 @@
 <div style="clear:both"></div>
 
         <div id="dane-pracownika">   
-            <p>Imię i nazwisko: <input type="text" class="pole-do-wypelnienia" placeholder="Piotr Krasoń"></input><br>
+            <p>Imię i nazwisko: <input id="imie-nazwisko-pracownika" type="text" class="pole-do-wypelnienia" placeholder="Piotr Krasoń"></input><br>
             Proszę o udzielenie <input type="text" class="pole-do-wypelnienia" placeholder="urlopu wypoczynkowego" value="urlopu wypoczynkowego"></input><br>
-            w terminie <span id="termin-urlopu">od <input type="text" name="data-od-do" class="pole-data selfadapt" placeholder=""></input> do <input type="text" name="data-od-do" class="pole-data selfadapt" placeholder=""></input></span>
-            </p>
+            <div id="vacation-day-container" class="">
+                <span id="vacation-term-label">w dniu </span><span id="vacation-day"></span>
+            </div>
+            <div id="vacation-term-container" class="invisibility noprint">
+                w terminie od <span id="vacation-term-from"></span> do <span id="vacation-term-to"></span>
+            </div>     
+            </p> 
         </div>
         <div style="clear:both"></div>
         <div id="podpis-akceptacje">  
@@ -84,7 +89,7 @@
 
     <form action="#" id="options-form">
 
-        <label for="typ-wniosku" class="custom-label">Typ wniosku:</label>
+        <label for="typ-wniosku" class="custom-label">Typ wniosku</label>
         <select name="typ-wniosku" id="typ-wniosku">
                 <option value="urlop-wypoczynkowy">Urlop wypoczynkowy</option>
                 <option value="urlop-okolicznosciowy">Urlop okolicznościowy</option>
@@ -92,22 +97,26 @@
                 <option value="wniosek-podwyzka">Wniosek o podwyżkę</option>
         </select>
         <p>&nbsp;</p>
-        <label for="data-dokumentu" class="custom-label">Data dokumentu:</label>
+        <label for="data-dokumentu" class="custom-label">Data dokumentu</label>
         <input id="data-dokumentu" type="date" name="data-dokumentu" class="pole-data-dokumentu" placeholder="" value="">
 
         <p>&nbsp;</p>
-        <label for="imie-nazwisko" class="custom-label">Imię i nazwisko:</label>
-        <input type="text" name="imie-nazwisko" class="options-form-elements" placeholder="">
+        <label for="imie-nazwisko" class="custom-label">Imię i nazwisko</label>
+        <input id="imie-nazwisko" type="text" name="imie-nazwisko" class="options-form-elements" placeholder="Piotr Krasoń">
 
         <p>&nbsp;</p>
-        <label for="czas" class="custom-label">Czas urlopu:</label>
-            <label><input type="radio" name="czas" checked="checked"> Dzień</label>
-            <label><input type="radio" name="czas"> Od - do</label>
+        <label for="vacation-term" class="custom-label">Data urlopu</label>
+            <label class="radio"><input id="radio-day" type="radio" name="vacation-term" checked="checked">Dzień</label>
+            <label class="radio"><input id="radio-term" type="radio" name="vacation-term">Termin</label>
             <p>&nbsp;</p>
-            <input id="dzien-urlopu" type="date" name="czas" class="options-form-elements" placeholder=""></input>
+            <div id="vacation-time" class="">
+            <input id="vacation-day-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
+            </div>
             <!-- OR -->
             <p>&nbsp;</p>
+            <div id="vacation-from-to" class="invisibility">
             Od <input type="date" name="czas" class="options-form-elements" placeholder=""></input> do <input type="date" name="czas" class="options-form-elements" placeholder=""></input>
+            </div>
         <p>&nbsp;</p>
         <button id="drukowanie" class="btn print-btn">Drukuj</button>
     </form>

@@ -21,6 +21,12 @@ label {
     font-size: 1.02em;
 }
 
+.radio {
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 h1 {
    text-align: center;
 }
@@ -37,6 +43,15 @@ h4 {
 
 p {
     margin:0;
+}
+
+#vacation-day {
+    font-weight:bold;
+}
+
+.invisibility {
+    display:none;
+    visibility: hidden;
 }
 
 #dane-firmy {
@@ -123,7 +138,6 @@ hr.thin {
 
 .pole-data {
     width: 77px;
-    margin-left: 5px;
 }
 
 .options-form-elements {
@@ -131,9 +145,12 @@ hr.thin {
     padding:4px 6px;
     color: #424242;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 0.8em;
 }
 
+#imie-nazwisko {
+    padding: 6px 7px;
+}
 
 .pole-data-dokumentu {
     width: 140px;
@@ -195,7 +212,6 @@ hr.thin {
 
     .pole-data {
         width: 67px;
-        margin-left: 8px;
     }
 }
 
@@ -222,7 +238,6 @@ hr.thin {
 
     .pole-data {
         width: 57px;
-        margin-left: 4px;
     }
 
 }
@@ -304,7 +319,7 @@ box-shadow: -10px 0px 36px -16px rgba(0,0,0,1);
 
  .custom-label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
     font-size: 0.8em;
  }
 
