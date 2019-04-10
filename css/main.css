@@ -171,7 +171,48 @@ hr.thin {
     #podpis-akceptacje {
         margin:50px 0;
     }
+
+    .pole-data {
+        width: 67px;
+        margin-left: 8px;
+    }
 }
+
+@media screen and (max-width: 1600px) {
+    h3 {
+        margin:55px;
+    }
+
+    #podglad {
+        font-size:11px;
+        width: 558px;
+        height: 756px;
+        padding:30px;
+    }
+ 
+    #podpis-akceptacje {
+        margin:60px 0;
+    }
+
+    .tab-akceptacje td {
+        padding:30px 0;
+        text-align: right;
+    }
+
+    .pole-data {
+        width: 57px;
+        margin-left: 4px;
+    }
+}
+
+
+:root { --size: 0; }
+
+.selfadapt {
+   min-width: 10ch;
+   width: calc(var(--size) * 1ch);
+}
+
 
 #options {
     z-index: 9999;

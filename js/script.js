@@ -1,3 +1,16 @@
+let input = document.querySelector('.selfadapt');
+let root  = document.documentElement.style;
+
+/* on input event auto resize the field */
+input.addEventListener('input', function() {
+   root.setProperty('--size', this.value.length );
+});
+
+/* resize the field if it is pre-populated */
+document.addEventListener("DOMContentLoaded", function() {
+   root.setProperty('--size', input.value.length);
+});
+
 var data = document.querySelector('#aktualna-data');
 
 function leadingZero(i) {
