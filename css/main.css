@@ -150,7 +150,7 @@ hr.thin {
     width: 744px;
     height: 992px;
     overflow:hidden;
-    padding:50px;
+    padding:60px 50px;
     background-color: #fff;
     border-radius: 2px;
     box-shadow: 0 3px 35px rgba(0,0,0,0.19), 0 5px 5px rgba(0,0,0,0.23);
@@ -169,7 +169,7 @@ hr.thin {
         padding:40px;
     }
     #podpis-akceptacje {
-        margin:50px 0;
+        margin:55px 0;
     }
 
     .pole-data {
