@@ -23,7 +23,7 @@ label {
 }
 
 .radio {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: bold;
     cursor: pointer;
 }
@@ -46,7 +46,7 @@ p {
     margin:0;
 }
 
-#vacation-day {
+.vacation-day {
     font-weight:bold;
 }
 
@@ -144,7 +144,7 @@ hr.thin {
 .options-form-elements {
     width: 140px;
     padding:4px 6px;
-    color: #424242;
+    color: #161616;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8em;
 }
@@ -308,13 +308,17 @@ box-shadow: -10px 0px 36px -16px rgba(0,0,0,1);
     background-position: 97% center;
     background-repeat: no-repeat;
     border: 1px solid #AAA;
-    color: #424242;
+    color: #161616;
     font-size: 0.8em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 250px;
     padding: 5px;
+ }
+
+ .term-label {
+    font-size: 0.8em;
  }
 
  .custom-label {
@@ -325,4 +329,8 @@ box-shadow: -10px 0px 36px -16px rgba(0,0,0,1);
 
  #options-form {
      text-align: right;
+ }
+
+ option:disabled {
+     color: #AAA;
  }

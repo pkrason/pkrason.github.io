@@ -46,10 +46,10 @@
             <p>Imię i nazwisko: <input id="imie-nazwisko-pracownika" type="text" class="pole-do-wypelnienia" placeholder="Piotr Krasoń"></input><br>
             Proszę o udzielenie <input type="text" class="pole-do-wypelnienia" placeholder="urlopu wypoczynkowego" value="urlopu wypoczynkowego"></input><br>
             <div id="vacation-day-container" class="">
-                <span id="vacation-term-label">w dniu </span><span id="vacation-day"></span>
+                <span id="vacation-term-label">w dniu </span><span id="vacation-day" class="vacation-day"></span>
             </div>
             <div id="vacation-term-container" class="invisibility noprint">
-                w terminie od <span id="vacation-term-from"></span> do <span id="vacation-term-to"></span>
+                w terminie od <span id="vacation-term-from" class="vacation-day"></span> do <span id="vacation-term-to" class="vacation-day"></span>
             </div>     
             </p> 
         </div>
@@ -84,7 +84,6 @@
 </div>
 
 
-
 <div id="options" class="noprint">
 
     <form action="#" id="options-form">
@@ -92,9 +91,9 @@
         <label for="typ-wniosku" class="custom-label">Typ wniosku</label>
         <select name="typ-wniosku" id="typ-wniosku">
                 <option value="urlop-wypoczynkowy">Urlop wypoczynkowy</option>
-                <option value="urlop-okolicznosciowy">Urlop okolicznościowy</option>
-                <option value="opieka">Opieka</option>
-                <option value="wniosek-podwyzka">Wniosek o podwyżkę</option>
+                <option value="urlop-okolicznosciowy" disabled>Urlop okolicznościowy</option>
+                <option value="opieka" disabled>Opieka</option>
+                <option value="wniosek-podwyzka" disabled>Wniosek o podwyżkę</option>
         </select>
         <p>&nbsp;</p>
         <label for="data-dokumentu" class="custom-label">Data dokumentu</label>
@@ -113,9 +112,9 @@
             <input id="vacation-day-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
             </div>
             <!-- OR -->
-            <p>&nbsp;</p>
             <div id="vacation-from-to" class="invisibility">
-            Od <input type="date" name="czas" class="options-form-elements" placeholder=""></input> do <input type="date" name="czas" class="options-form-elements" placeholder=""></input>
+            <span class="term-label">Od</span> <input id="vacation-term-from-options" type="date" name="czas" class="options-form-elements" placeholder=""></input> <span class="term-label">do </span>
+            <input  id="vacation-term-to-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
             </div>
         <p>&nbsp;</p>
         <button id="drukowanie" class="btn print-btn">Drukuj</button>
