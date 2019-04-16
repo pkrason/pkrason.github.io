@@ -132,10 +132,6 @@ function proposalChange() {
    
 }
 
-
-// Event on select change
-proposalType.addEventListener('change', proposalChange);
-
 // Event on input change filling document date on view
 documentDateOptions.addEventListener('input', fillDocumentDate);
 nameSurnameOptions.addEventListener('input', fillNameSurname);
