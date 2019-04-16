@@ -168,7 +168,7 @@ hr.thin {
 #tlo-kontener {
     box-sizing: border-box;
     float:left;
-    width:75%;
+    width:70%;
     overflow:hidden;
     padding:15px;
     background-color: #e1e1e1;
@@ -256,7 +256,7 @@ hr.thin {
 
     color:white;
     float:right;
-    width:25%;
+    width:30%;
     overflow:hidden;
     box-sizing: border-box;
     padding:40px 40px;
