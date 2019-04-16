@@ -130,14 +130,19 @@ var radioVacationTerm = document.getElementById("radio-term"),
     vacationDayContainer = document.querySelector('#vacation-day-container');
 
 radioVacationTerm.addEventListener('change', function(){
+
     vacationTermContainer.classList.remove('invisibility', 'noprint');
     vacationDayContainer.classList.add('invisibility', 'noprint');
  
     vacationTimeOptions.classList.add('invisibility', 'noprint');
     vacationFromToOptions.classList.remove('invisibility', 'noprint');
+
+    fillVacationDayTerm();
 });
 
 radioVacationDay.addEventListener('change', function(){
+
+
     vacationTermContainer.classList.add('invisibility', 'noprint');
     vacationDayContainer.classList.remove('invisibility', 'noprint');
 
