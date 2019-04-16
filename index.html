@@ -108,14 +108,15 @@
         <label for="vacation-term" class="custom-label">Data urlopu</label>
             <label class="radio"><input id="radio-day" type="radio" name="vacation-term" checked="checked">Dzień</label>
             <label class="radio"><input id="radio-term" type="radio" name="vacation-term">Termin</label>
-            <p>&nbsp;</p>
-            <div id="vacation-time" class="">
-            <input id="vacation-day-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
-            </div>
-            <!-- OR -->
-            <div id="vacation-from-to" class="invisibility">
-            <span class="term-label">Od</span> <input id="vacation-term-from-options" type="date" name="czas" class="options-form-elements" placeholder=""></input> <span class="term-label">do </span>
-            <input  id="vacation-term-to-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
+            <div class="vacation-time-container">
+                <div id="vacation-time" class="">
+                <input id="vacation-day-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
+                </div>
+                <!-- OR -->
+                <div id="vacation-from-to" class="invisibility">
+                <span class="term-label">Od</span> <input id="vacation-term-from-options" type="date" name="czas" class="options-form-elements" placeholder=""></input> <span class="term-label">do </span>
+                <input  id="vacation-term-to-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
+                </div>
             </div>
         <p>&nbsp;</p>
         <button id="drukowanie" class="btn print-btn">Drukuj</button>

@@ -51,6 +51,10 @@ p {
     font-weight:bold;
 }
 
+.vacation-time-container {
+    margin-top: 5px;
+}
+
 .invisibility {
     display:none;
     visibility: hidden;
