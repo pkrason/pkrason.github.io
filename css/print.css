@@ -6,7 +6,7 @@
 
 @media print {
 
-    .noprint  { display: none; } }
+    .noprint  { display: none; } 
 
     body {
         margin:1.3cm;
