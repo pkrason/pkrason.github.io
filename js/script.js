@@ -1,5 +1,6 @@
 // Options elements variables
-var documentDateOptions = document.querySelector('#data-dokumentu'),
+var proposalType = document.querySelector('#typ-wniosku'),
+    documentDateOptions = document.querySelector('#data-dokumentu'),
     nameSurnameOptions = document.querySelector('#imie-nazwisko'),
     vacationDayOptions = document.querySelector('#vacation-day-options'),
     vacationTimeOptions = document.querySelector('#vacation-time'),
@@ -110,6 +111,25 @@ function fillNameSurname(){
     // Filling name and surname on view
     nameSurnameEmployee.value = nameSurnameOptions.value;
 }
+
+
+function proposalChange() {
+    switch (proposalType.value) {
+        case "urlop-wypoczynkowy":
+        document.getElementById('podglad').innerHTML = `${urlopWypoczynkowy}`;
+        break;
+        case "urlop-na-zadanie":
+        document.getElementById('podglad').innerHTML = 'Urlop na żądanie';
+        break;
+        default:
+        document.getElementById('podglad').innerHTML = 'Inny';
+   }
+   
+}
+
+
+// Event on select change
+proposalType.addEventListener('change', proposalChange);
 
 // Event on input change filling document date on view
 documentDateOptions.addEventListener('input', fillDocumentDate);
