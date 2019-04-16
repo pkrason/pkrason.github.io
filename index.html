@@ -5,126 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Generator dokumentów</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/frontpage.css">
     <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/icons.css">
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script src="js/script.js" defer></script>
-  <script src="documents/urlop_wypoczynkowy.js" defer></script>
 </head>
 <body>
-    
-<div id="wrapper">
 
-<div id="tlo-kontener">
-    
-    <div id="podglad">
-
-      <div id="urlop-wypoczynkowy">
-
-        <div id="dane-firmy">   
-            <h4>I-BS.PL Sp. z o. o.</h4>
-            <p>Solidarności 2A<br>
-               37-450 Stalowa Wola<br>
-               NIP: 857-215-01-41<br>
-            </p>
+    <div class="container">
+        <div class="menu-item">
+            <a href="documents/urlop_wypoczynkowy.html">Urlop wypoczynkowy</a>
         </div>
-        <div id="data">   
-            <input type="text" id="aktualna-data"></input>
+        <div class="menu-item">
+            <a href="documents/urlop_na_zadanie.html">Urlop na żądanie</a>
         </div>
-        
- <div style="clear:both"></div>
-
-        <div id="tytul">   
-            <h3>Wniosek o urlop</h3>
+        <div class="menu-item">
+            <a href="documents/opieka.html">Opieka</a>
         </div>
-
-<div style="clear:both"></div>
-
-        <div id="dane-pracownika">   
-            <p>Imię i nazwisko: <input id="imie-nazwisko-pracownika" type="text" class="pole-do-wypelnienia" placeholder="Piotr Krasoń"></input><br>
-            Proszę o udzielenie <input type="text" class="pole-do-wypelnienia" placeholder="urlopu wypoczynkowego" value="urlopu wypoczynkowego"></input><br>
-            <div id="vacation-day-container" class="">
-                <span id="vacation-term-label">w dniu </span><span id="vacation-day" class="vacation-day"></span>
-            </div>
-            <div id="vacation-term-container" class="invisibility noprint">
-                w terminie od <span id="vacation-term-from" class="vacation-day"></span> do <span id="vacation-term-to" class="vacation-day"></span>
-            </div>     
-            </p> 
+        <div class="menu-item">
+            <a href="documents/urlop_okolicznosciowy.html">Urlop okolicznościowy</a>
         </div>
-        <div style="clear:both"></div>
-        <div id="podpis-akceptacje">  
-            
-            <table class="tab-akceptacje">
-                <tr>
-                    <td>Podpis pracownika:</td>
-                    <td class="kropki">..........................................................</td>
-                </tr>
-                <tr>
-                    <td>Akceptacja bezpośredniego przełożonego:</td>
-                    <td class="kropki">..........................................................</td>
-                </tr>
-                <tr>
-                    <td>Akceptacja Zarządu<span class="igorny">*</span>:</td>
-                    <td class="kropki">..........................................................</td>
-                </tr>
-            </table>
+        <div class="menu-item">
+            <a href="documents/wniosek_o_podwyzke.html">Wniosek o podwyżkę</a>
         </div>
-
-<div style="clear:both"></div>
-
-        <footer>
-            <hr class="thin">
-            <span class="igorny">*</span><span class="text-stopka">Dotyczy urlopu dłuższego bądź równego 5 dni roboczych oraz urlopów opiekuńczych</span> 
-        </footer>
     </div>
-   </div> 
-
-</div>
-
-
-<div id="options" class="noprint">
-
-    <form action="#" id="options-form">
-
-        <label for="typ-wniosku" class="custom-label">Typ wniosku</label>
-        <select name="typ-wniosku" id="typ-wniosku">
-                <option value="urlop-wypoczynkowy">Urlop wypoczynkowy</option>
-                <option value="urlop-na-zadanie">Urlop na żądanie</option>
-                <option value="urlop-okolicznosciowy" disabled>Urlop okolicznościowy</option>
-                <option value="opieka" disabled>Opieka</option>
-                <option value="wniosek-podwyzka" disabled>Wniosek o podwyżkę</option>
-        </select>
-        <p>&nbsp;</p>
-        <label for="data-dokumentu" class="custom-label">Data dokumentu</label>
-        <input id="data-dokumentu" type="date" name="data-dokumentu" class="pole-data-dokumentu" placeholder="" value="">
-
-        <p>&nbsp;</p>
-        <label for="imie-nazwisko" class="custom-label">Imię i nazwisko</label>
-        <input id="imie-nazwisko" type="text" name="imie-nazwisko" class="options-form-elements" placeholder="Piotr Krasoń">
-
-        <p>&nbsp;</p>
-        <label for="vacation-term" class="custom-label">Data urlopu</label>
-            <label class="radio"><input id="radio-day" type="radio" name="vacation-term" checked="checked">Dzień</label>
-            <label class="radio"><input id="radio-term" type="radio" name="vacation-term">Termin</label>
-            <div class="vacation-time-container">
-                <div id="vacation-time" class="">
-                <input id="vacation-day-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
-                </div>
-                <!-- OR -->
-                <div id="vacation-from-to" class="invisibility">
-                <span class="term-label">Od</span> <input id="vacation-term-from-options" type="date" name="czas" class="options-form-elements" placeholder=""></input> <span class="term-label">do </span>
-                <input  id="vacation-term-to-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
-                </div>
-            </div>
-        <p>&nbsp;</p>
-        <button id="drukowanie" class="btn print-btn">Drukuj</button>
-    </form>
-</div>
-</div>
 
 </body>
 </html>

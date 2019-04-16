@@ -13,18 +13,17 @@ var proposalType = document.querySelector('#typ-wniosku'),
 
 // View elements variables
 var vacationTermFrom = document.querySelector('#vacation-term-from'),
-    vacationTermTo = document.querySelector('#vacation-term-to');
+    vacationTermTo = document.querySelector('#vacation-term-to'),
+    data = document.querySelector('#aktualna-data');
 
 
-var data = document.querySelector('#aktualna-data');
+    function leadingZero(i) {
 
-function leadingZero(i) {
-
-    if (i < 10) { 
-        return '0' + i;
-    } else return i;
-
-}
+        if (i < 10) { 
+            return '0' + i;
+        } else return i;
+    
+    }
 
 // Dates
 const currentDate = new Date();
@@ -33,6 +32,8 @@ var dataTomorrow = `${leadingZero(currentDate.getDate()+1)}.${leadingZero(curren
 var specialDataFormat = `${currentDate.getFullYear()}-${leadingZero(currentDate.getMonth()+1)}-${leadingZero(currentDate.getDate())}`;
 var specialDataFormatTomorrow = `${currentDate.getFullYear()}-${leadingZero(currentDate.getMonth()+1)}-${leadingZero(currentDate.getDate()+1)}`;
 var specialDataFormatAfterTomorrow = `${currentDate.getFullYear()}-${leadingZero(currentDate.getMonth()+1)}-${leadingZero(currentDate.getDate()+3)}`;
+
+
 
 // Setting value of date on view
 data.value = `Stalowa Wola, ${dataNow}`;
@@ -65,7 +66,7 @@ function fillDocumentDate(){
     var rok = dataDocumentDotted.substr(0,4),
     miesiac = dataDocumentDotted.substr(5,2),
     dzien = dataDocumentDotted.substr(8,2);``
-    var dataDocumentDotted = `${dzien}.${miesiac}.${rok}`;
+    dataDocumentDotted = `${dzien}.${miesiac}.${rok}`;
 
     // Filling document date on view
     data.value = `Stalowa Wola, ${dataDocumentDotted}`;
@@ -116,7 +117,11 @@ function fillNameSurname(){
 function proposalChange() {
     switch (proposalType.value) {
         case "urlop-wypoczynkowy":
-        document.getElementById('podglad').innerHTML = `${urlopWypoczynkowy}`;
+        newDiv = document.createElement("div");
+        newDiv.innerHTML = `<h1>Hi there and greetings!</h1><span id="aktualna-data">${data.value}</span>`;
+        document.getElementById('podglad').appendChild(newDiv);
+        documentDateOptions.addEventListener('input', fillDocumentDate);
+        data.value = `Stalowa Wola, ${documentDateOptions.value}`;
         break;
         case "urlop-na-zadanie":
         document.getElementById('podglad').innerHTML = 'Urlop na żądanie';

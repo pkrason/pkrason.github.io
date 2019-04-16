@@ -218,6 +218,11 @@ hr.thin {
     -moz-box-shadow: -10px 0px 36px -16px rgba(0,0,0,1);
     box-shadow: -10px 0px 36px -16px rgba(0,0,0,1);
 }
+.powrot {
+    position: absolute;
+    text-decoration: none;
+    color: #161616;
+}
 
 .btn {
     cursor: pointer;
