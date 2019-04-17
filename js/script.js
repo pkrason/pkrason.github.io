@@ -35,6 +35,9 @@ var specialDataFormatAfterTomorrow = `${currentDate.getFullYear()}-${leadingZero
 
 
 
+
+
+
 // Setting value of date on view
 data.value = `Stalowa Wola, ${dataNow}`;
 

@@ -42,20 +42,17 @@
     }
     
     #dane-firmy {
-        display: inline-block;
         text-align: left;
         float: left;
         line-height:18px;
     }
     
     #data {
-        display: inline-block;
         text-align: right;
         float: right;
     }
     
     #aktualna-data {
-        display: inline;
         width: 200px;
         font-style: italic;
         font-weight: normal;
@@ -67,7 +64,6 @@
     }
     
     #dane-pracownika {
-        display: inline-block;
         text-align: left;
         float: left;
         line-height:36px;
