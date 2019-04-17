@@ -220,8 +220,15 @@ hr.thin {
 }
 .powrot {
     position: absolute;
+    top: 15px;
+    left: 15px;
     text-decoration: none;
     color: #161616;
+    fill: #333333;
+}
+
+.powrot img {
+    max-width:30px;
 }
 
 .btn {
