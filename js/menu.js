@@ -7,7 +7,7 @@ function openDocument(e) {
 
         let clickedItem = e.target.querySelector('a');
     
-        location.reload();location.href= clickedItem;
+        location.reload();location.href = clickedItem;
     }
     e.stopPropagation();
 }
