@@ -7,6 +7,28 @@ body {
     background-color: #333333;  
 }
 
+.header-big {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    margin-left: -156px;
+    font-size: 38px;
+    color: #ffffff;
+    font-family: 'Titillium Web', Arial, sans-serif;
+}
+
+.header-small {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    margin-left: -95px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    font-family: 'Titillium Web', Arial, sans-serif;
+    opacity: 0.4;
+}
+
 #container {
     display: flex;
     justify-content: center;
@@ -18,8 +40,8 @@ body {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    width: 160px;
-    height: 220px;
+    width: 165px;
+    height: 225px;
     border-radius: 4px;
     background: #eeeeee; /* Old browsers */
     background: -moz-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%); /* FF3.6-15 */
@@ -34,6 +56,7 @@ body {
     transition: all .3s ease-in-out;
     z-index: 1;
     border:2px solid #eeeeee;
+    line-height: 16px;
 }
 
 .menu-item:after {
@@ -67,11 +90,10 @@ body {
     padding:1px;
     max-width: 65px;
     display: block;
-    margin: 52px auto 6px;
+    margin: 60px auto 7px;
     z-index: 3;
     border:3px solid #eeeeee;
     border-radius: 50%;
-
 }
 
 /* 
