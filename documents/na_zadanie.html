@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Urlop na żądanie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" media="print" href="../css/print_na_zadanie.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/na_zadanie.css">
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -45,15 +45,15 @@
 <div style="clear:both"></div>
 
         <div id="dane-pracownika">   
-            <p>Imię i nazwisko: <input id="imie-nazwisko-pracownika" type="text" class="pole-do-wypelnienia" placeholder="Piotr Krasoń"></input><br>
-            Proszę o udzielenie <input type="text" class="pole-do-wypelnienia" placeholder="urlopu wypoczynkowego" value="urlopu wypoczynkowego"></input><br>
-            <div id="vacation-day-container" class="">
-                <span id="vacation-term-label">w dniu </span><span id="vacation-day" class="vacation-day"></span>
-            </div>
-            <div id="vacation-term-container" class="invisibility noprint">
-                w terminie od <span id="vacation-term-from" class="vacation-day"></span> do <span id="vacation-term-to" class="vacation-day"></span>
-            </div>     
-            </p> 
+            <p class="margin-paragraph">
+                Imię i nazwisko: <input id="imie-nazwisko-pracownika" type="text" class="pole-do-wypelnienia" placeholder="Piotr Krasoń"></input>
+            </p>
+            <p class="margin-paragraph">
+                Proszę o udzielenie <span class="vacation-day">urlopu wypoczynkowego na żądanie </span>w dniu <span id="vacation-day" class="vacation-day"></span><span class="vacation-day"> r.</span>
+            </p>
+            <p>
+            Jednocześnie oświadczam, że jest to <span class="vacation-day">1 dzień</span> urlopu wypoczynkowego w <span class="vacation-day">2019 roku</span>, udzielenia którego żądam na podstawie art. 167² K.p.    
+            </p>
         </div>
         <div style="clear:both"></div>
         <div id="podpis-akceptacje">  
@@ -67,19 +67,12 @@
                     <td>Akceptacja bezpośredniego przełożonego:</td>
                     <td class="kropki">..........................................................</td>
                 </tr>
-                <tr>
-                    <td>Akceptacja Zarządu<span class="igorny">*</span>:</td>
-                    <td class="kropki">..........................................................</td>
-                </tr>
             </table>
         </div>
 
 <div style="clear:both"></div>
 
-        <footer>
-            <hr class="thin">
-            <span class="igorny">*</span><span class="text-stopka">Dotyczy urlopu dłuższego bądź równego 5 dni roboczych oraz urlopów opiekuńczych</span> 
-        </footer>
+        
     </div>
    </div> 
 
@@ -98,8 +91,6 @@
 
         <p>&nbsp;</p>
         <label for="vacation-term" class="custom-label">Data urlopu</label>
-            <label class="radio"><input id="radio-day" type="radio" name="vacation-term" checked="checked">Dzień</label>
-            <label class="radio"><input id="radio-term" type="radio" name="vacation-term">Termin</label>
             <div class="vacation-time-container">
                 <div id="vacation-time" class="">
                 <input id="vacation-day-options" type="date" name="czas" class="options-form-elements" placeholder=""></input>
