@@ -1,11 +1,11 @@
+// Usunąć wniosek o podwyżkę i zmienić nazwę na generator urlopów i title na Wybierz wniosek urlopowy
 // Przebudować na klasy i obiekty
 // Dodać obsługę dni +1 i +2
 // Zrobić wnioski: urlop opiekuńczy, urlop okolicznościowy i wniopsek o podwyżkę 
-
+// Oddzielić główny css od poszczególnych wniosków
 
 // Options elements variables
-var proposalType = document.querySelector('#typ-wniosku'),
-    documentDateOptions = document.querySelector('#data-dokumentu'),
+var documentDateOptions = document.querySelector('#data-dokumentu'),
     nameSurnameOptions = document.querySelector('#imie-nazwisko'),
     vacationDayOptions = document.querySelector('#vacation-day-options'),
     vacationTimeOptions = document.querySelector('#vacation-time'),
@@ -36,14 +36,14 @@ var specialDataFormat = `${currentDate.getFullYear()}-${leadingZero(currentDate.
 // dorobić daty +1 i +2 dni
 
 // Setting dates
-vacationDay.textContent = `${dataNow}`;
+vacationDay.textContent = `${dataNow} r.`;
 documentDateOptions.value = `${specialDataFormat}`;
 vacationDayOptions.value = `${specialDataFormat}`;
 vacationTermFromOptions.value = `${specialDataFormat}`;
 vacationTermToOptions.value = `${specialDataFormat}`;
 
 // Setting value of date on view
-data.value = `Stalowa Wola, ${dataNow}`;
+data.value = `Stalowa Wola, ${dataNow} r.`;
 
 // Print action
 buttonPrint.addEventListener('click', function(){
@@ -59,7 +59,7 @@ function fillDocumentDate(){
     dataDocumentDotted = `${dzien}.${miesiac}.${rok}`;
 
     // Filling document date on view
-    data.value = `Stalowa Wola, ${dataDocumentDotted}`;
+    data.value = `Stalowa Wola, ${dataDocumentDotted} r.`;
 }
 
 function fillVacationDay(){
@@ -68,7 +68,7 @@ function fillVacationDay(){
     var rok = dataVacationDotted.substr(0,4),
     miesiac = dataVacationDotted.substr(5,2),
     dzien = dataVacationDotted.substr(8,2);``
-    dataVacationDotted = `${dzien}.${miesiac}.${rok}`;
+    dataVacationDotted = `${dzien}.${miesiac}.${rok} r.`;
 
     // Filling document date on view
     vacationDay.textContent = `${dataVacationDotted}`;
