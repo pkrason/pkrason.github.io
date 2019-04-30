@@ -1,3 +1,8 @@
+// Przebudować na klasy i obiekty
+// Dodać obsługę dni +1 i +2
+// Zrobić wnioski: urlop opiekuńczy, urlop okolicznościowy i wniopsek o podwyżkę 
+
+
 // Options elements variables
 var proposalType = document.querySelector('#typ-wniosku'),
     documentDateOptions = document.querySelector('#data-dokumentu'),
@@ -16,7 +21,6 @@ var vacationTermFrom = document.querySelector('#vacation-term-from'),
     vacationTermTo = document.querySelector('#vacation-term-to'),
     data = document.querySelector('#aktualna-data');
 
-
     function leadingZero(i) {
 
         if (i < 10) { 
@@ -28,44 +32,27 @@ var vacationTermFrom = document.querySelector('#vacation-term-from'),
 // Dates
 const currentDate = new Date();
 var dataNow = data.textContent = `${leadingZero(currentDate.getDate())}.${leadingZero(currentDate.getMonth()+1)}.${currentDate.getFullYear()}`;
-var dataTomorrow = `${leadingZero(currentDate.getDate()+1)}.${leadingZero(currentDate.getMonth()+1)}.${currentDate.getFullYear()}`;
 var specialDataFormat = `${currentDate.getFullYear()}-${leadingZero(currentDate.getMonth()+1)}-${leadingZero(currentDate.getDate())}`;
-var specialDataFormatTomorrow = `${currentDate.getFullYear()}-${leadingZero(currentDate.getMonth()+1)}-${leadingZero(currentDate.getDate()+1)}`;
-var specialDataFormatAfterTomorrow = `${currentDate.getFullYear()}-${leadingZero(currentDate.getMonth()+1)}-${leadingZero(currentDate.getDate()+3)}`;
+// dorobić daty +1 i +2 dni
 
-
-
-
-
+// Setting dates
+vacationDay.textContent = `${dataNow}`;
+documentDateOptions.value = `${specialDataFormat}`;
+vacationDayOptions.value = `${specialDataFormat}`;
+vacationTermFromOptions.value = `${specialDataFormat}`;
+vacationTermToOptions.value = `${specialDataFormat}`;
 
 // Setting value of date on view
 data.value = `Stalowa Wola, ${dataNow}`;
-
-// zbadaj coto start
-var polaDaty = document.getElementsByClassName('pole-data');
-for(var i = 0; i < polaDaty.length; i++)
-{
-    polaDaty[i].placeholder= `${dataTomorrow}`;
-}
-// zbadaj coto end
 
 // Print action
 buttonPrint.addEventListener('click', function(){
     window.print();
 })
 
-
-// Setting dates
-vacationDay.textContent = `${dataTomorrow}`;
-documentDateOptions.value = `${specialDataFormat}`;
-vacationTermFromOptions.value = `${specialDataFormatTomorrow}`;
-vacationTermToOptions.value = `${specialDataFormatAfterTomorrow}`;
-
-
-
 function fillDocumentDate(){
     var dataDocumentDotted = documentDateOptions.value;
-    // Changing fotmat yyyy-mm-dd to dd.mm.yyyy
+    // Changing format yyyy-mm-dd to dd.mm.yyyy
     var rok = dataDocumentDotted.substr(0,4),
     miesiac = dataDocumentDotted.substr(5,2),
     dzien = dataDocumentDotted.substr(8,2);``
@@ -86,7 +73,6 @@ function fillVacationDay(){
     // Filling document date on view
     vacationDay.textContent = `${dataVacationDotted}`;
 }
-
 
 function fillVacationDayTerm(){
     var vacationTermFromDotted = vacationTermFromOptions.value;
@@ -109,43 +95,17 @@ function fillVacationDayTerm(){
     vacationTermTo.textContent = `${vacationTermToDotted}`;
 }
 
-
-
 function fillNameSurname(){
     // Filling name and surname on view
     nameSurnameEmployee.value = nameSurnameOptions.value;
-}
-
-
-function proposalChange() {
-    switch (proposalType.value) {
-        case "urlop-wypoczynkowy":
-        newDiv = document.createElement("div");
-        newDiv.innerHTML = `<h1>Hi there and greetings!</h1><span id="aktualna-data">${data.value}</span>`;
-        document.getElementById('podglad').appendChild(newDiv);
-        documentDateOptions.addEventListener('input', fillDocumentDate);
-        data.value = `Stalowa Wola, ${documentDateOptions.value}`;
-        break;
-        case "urlop-na-zadanie":
-        document.getElementById('podglad').innerHTML = 'Urlop na żądanie';
-        break;
-        default:
-        document.getElementById('podglad').innerHTML = 'Inny';
-   }
-   
 }
 
 // Event on input change filling document date on view
 documentDateOptions.addEventListener('input', fillDocumentDate);
 nameSurnameOptions.addEventListener('input', fillNameSurname);
 vacationDayOptions.addEventListener('input', fillVacationDay);
-
 vacationTermFromOptions.addEventListener('input', fillVacationDayTerm);
 vacationTermToOptions.addEventListener('input', fillVacationDayTerm);
-
-
-vacationDayOptions.value =`${specialDataFormatTomorrow}`;
-
 
 // Radio varaibles
 var radioVacationTerm = document.getElementById("radio-term"),
@@ -153,8 +113,8 @@ var radioVacationTerm = document.getElementById("radio-term"),
     vacationTermContainer = document.querySelector('#vacation-term-container'),
     vacationDayContainer = document.querySelector('#vacation-day-container');
 
+// Radio change events
 radioVacationTerm.addEventListener('change', function(){
-
     vacationTermContainer.classList.remove('invisibility', 'noprint');
     vacationDayContainer.classList.add('invisibility', 'noprint');
  
@@ -165,8 +125,6 @@ radioVacationTerm.addEventListener('change', function(){
 });
 
 radioVacationDay.addEventListener('change', function(){
-
-
     vacationTermContainer.classList.add('invisibility', 'noprint');
     vacationDayContainer.classList.remove('invisibility', 'noprint');
 

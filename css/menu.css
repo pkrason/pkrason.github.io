@@ -8,21 +8,26 @@ body {
 }
 
 .header-big {
-    position: absolute;
+    /* position: absolute;
     top: 22%;
     left: 50%;
-    margin-left: -156px;
+    margin-left: -156px; */
+    display: block;
+    text-align: center;
     font-size: 38px;
     font-weight: 600;
     color: #ffffff;
     font-family: 'Titillium Web', Arial, sans-serif;
+    margin-top:200px;
 }
 
 .header-small {
-    position: absolute;
+    /* position: absolute;
     top: 28%;
     left: 50%;
-    margin-left: -95px;
+    margin-left: -95px; */
+    display: block;
+    text-align: center;
     font-size: 14px;
     font-weight: 300;
     color: #ffffff;
@@ -34,7 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    height:40vh;
 }
 
 .menu-item {

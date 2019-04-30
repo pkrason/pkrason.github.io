@@ -220,15 +220,16 @@ hr.thin {
 }
 .powrot {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    text-decoration: none;
-    color: #161616;
-    fill: #333333;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #333333;
+    opacity: .85;
+    transition: .3s opacity;
 }
 
-.powrot img {
-    max-width:30px;
+.powrot:hover{
+    opacity: 1;
 }
 
 .btn {

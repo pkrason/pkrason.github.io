@@ -8,22 +8,56 @@
     </head>
     <body>
        <h3>Kalkulator v.1</h3>
-        <form action="" name="kalkulator1">
-            <fieldgroup>
-              <input type="text" name="l1">
-              
- 
-              <input type="text" name="l2">
-         </fieldgroup>
-         <filedgroup>
-              <input type="button" value="+" id="suma" onClick="dzialanie1('suma')">
-                <input type="button" value="-" id="roznica" onClick="dzialanie1('roznica')">
-              <input type="button" value="*" id="iloczyn" onClick="dzialanie1('iloczyn')">
-              <input type="button" value="/" id="iloraz" onClick="dzialanie1('iloraz')">
-            </filedgroup>
+        <form action="" name="kalkulator1" style="display: inline;">
+
+              <input id="l1" type="text" name="l1">
+              <input id="l2" type="text" name="l2">
+
+              <input type="button" value="+" id="suma">
+              <input type="button" value="-" id="roznica">
+              <input type="button" value="*" id="iloczyn">
+              <input type="button" value="/" id="iloraz">
+
         </form>
-<div id="wynik"></div>
+        <span> = </span>
+        <div id="wynik" style="font-size: 16px; font-weight: bold; display: inline;">0</div>
+        
         <script>
+
+          let wynikLabel = document.getElementById('wynik'),
+              liczba1 = document.getElementById('l1'),
+              liczba2 = document.getElementById('l2');              
+
+         let suma = function(){
+           let wynik = Number(liczba1.value) + Number(liczba2.value); 
+           wynikLabel.textContent = wynik;
+         }
+
+         let roznica = function(){
+           let wynik = Number(liczba1.value) - Number(liczba2.value); 
+           wynikLabel.textContent = wynik;
+         }
+
+         let iloczyn = function(){
+           let wynik = Number(liczba1.value) * Number(liczba2.value); 
+           wynikLabel.textContent = wynik;
+         }
+
+         let iloraz = function(){
+           let wynik = Number(liczba1.value) / Number(liczba2.value); 
+           wynikLabel.textContent = wynik;
+         }
+
+          let sumaBtn = document.getElementById('suma');
+              roznicaBtn = document.getElementById('roznica');
+              iloczynBtn = document.getElementById('iloczyn');
+              ilorazBtn = document.getElementById('iloraz');
+          
+          sumaBtn.addEventListener('click', suma);
+          roznicaBtn.addEventListener('click', roznica);
+          iloczynBtn.addEventListener('click', iloczyn);
+          ilorazBtn.addEventListener('click', iloraz);
+
         </script>
     </body>
 </html>
