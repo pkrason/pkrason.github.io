@@ -1,7 +1,6 @@
-// Usunąć wniosek o podwyżkę i zmienić nazwę na generator urlopów i title na Wybierz wniosek urlopowy
 // Przebudować na klasy i obiekty
 // Dodać obsługę dni +1 i +2
-// Zrobić wnioski: urlop opiekuńczy, urlop okolicznościowy i wniopsek o podwyżkę 
+// Zrobić wniosek o urlop okolicznościowy 
 // Oddzielić główny css od poszczególnych wniosków
 
 // Options elements variables
@@ -33,7 +32,7 @@ var vacationTermFrom = document.querySelector('#vacation-term-from'),
 const currentDate = new Date();
 var dataNow = data.textContent = `${leadingZero(currentDate.getDate())}.${leadingZero(currentDate.getMonth()+1)}.${currentDate.getFullYear()}`;
 var specialDataFormat = `${currentDate.getFullYear()}-${leadingZero(currentDate.getMonth()+1)}-${leadingZero(currentDate.getDate())}`;
-// dorobić daty +1 i +2 dni
+
 
 // Setting dates
 vacationDay.textContent = `${dataNow} r.`;
@@ -84,7 +83,7 @@ function fillVacationDayTerm(){
     vacationTermFromDotted = `${dzien}.${miesiac}.${rok}`;
 
     // Filling term from date on view
-    vacationTermFrom.textContent = `${vacationTermFromDotted}`;
+    vacationTermFrom.textContent = `${vacationTermFromDotted} r.`;
 
     var rok = vacationTermToDotted.substr(0,4),
     miesiac = vacationTermToDotted.substr(5,2),
@@ -92,7 +91,7 @@ function fillVacationDayTerm(){
     vacationTermToDotted = `${dzien}.${miesiac}.${rok}`;
 
     // Filling term to date on view
-    vacationTermTo.textContent = `${vacationTermToDotted}`;
+    vacationTermTo.textContent = `${vacationTermToDotted} r.`;
 }
 
 function fillNameSurname(){
