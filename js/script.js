@@ -11,7 +11,7 @@ var documentDateOptions = document.querySelector('#data-dokumentu'),
     vacationFromToOptions = document.querySelector('#vacation-from-to'),
     vacationTermFromOptions = document.querySelector('#vacation-term-from-options'),
     vacationTermToOptions = document.querySelector('#vacation-term-to-options'),
-    nameSurnameEmployee = document.querySelector('#imie-nazwisko-pracownika'),
+    nameSurnameEmployee = document.querySelector('#worker'),
     vacationDay = document.querySelector('#vacation-day'),
     buttonPrint = document.querySelector('#drukowanie');
 

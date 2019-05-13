@@ -1,0 +1,194 @@
+.margin-paragraph {
+  margin-bottom: 15px;
+}
+
+.vacation-day {
+  font-weight: bold;
+}
+
+.invisibility {
+  display: none;
+  visibility: hidden;
+}
+
+#dane-firmy {
+  text-align: left;
+  float: left;
+  line-height: 18px;
+}
+
+
+#tytul {
+  text-align: center;
+}
+
+#request-informations {
+  text-align: left;
+  float: left;
+  line-height: 36px;
+}
+
+#termin-urlopu {
+  font-weight: 600;
+}
+
+#imie-nazwisko {
+  font-weight: 600;
+}
+
+#podpis-pracownika {
+  margin: 150px 0;
+  text-align: center;
+}
+
+#podpis-akceptacje {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.tab-akceptacje {
+  margin: auto;
+}
+
+.tab-akceptacje td {
+  padding: 50px 0;
+  text-align: right;
+}
+
+.igorny {
+  vertical-align: super;
+  font-size: 12px;
+}
+
+.text-stopka {
+  font-size: 1em;
+}
+
+.kropki {
+  margin-top: 6px;
+  color: #ddd;
+  vertical-align: bottom;
+}
+
+hr.thin {
+  height: 1px;
+  border-top: none;
+  border-bottom: 1px solid #333333;
+  transform: scaleY(0.33);
+}
+
+.pole-do-wypelnienia {
+  width: 200px;
+}
+
+.pole-data {
+  width: 77px;
+}
+
+.options-form-elements {
+  width: 140px;
+  padding: 4px 6px;
+  color: #161616;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+}
+
+#imie-nazwisko {
+  padding: 6px 7px;
+}
+
+.pole-data-dokumentu {
+  width: 140px;
+  padding: 4px 6px;
+  color: #424242;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+}
+
+#wrapper {
+  margin: 0;
+}
+
+#tlo-kontener {
+  box-sizing: border-box;
+  float: left;
+  width: 75%;
+  overflow: hidden;
+  padding: 15px;
+  background-color: #e1e1e1;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.term-label {
+  font-size: 0.8em;
+}
+
+.custom-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.8em;
+}
+
+#options-form {
+  text-align: right;
+}
+
+option:disabled {
+  color: #aaa;
+}
+
+@media screen and (max-width: 1920px) {
+  #podglad {
+    font-size: 0.84em;
+    width: 620px;
+    height: 840px;
+    padding: 40px;
+  }
+  #podpis-akceptacje {
+    margin: 80px 0;
+  }
+
+  .pole-data {
+    width: 67px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  #options {
+    width: 30%;
+  }
+
+  h3 {
+    margin: 55px;
+  }
+
+  #podglad {
+    font-size: 11px;
+    width: 558px;
+    height: 756px;
+    padding: 30px;
+  }
+
+  #podpis-akceptacje {
+    margin: 60px 0;
+  }
+
+  .tab-akceptacje td {
+    padding: 30px 0;
+    text-align: right;
+  }
+
+  .pole-data {
+    width: 57px;
+  }
+
+  #tlo-kontener {
+    width: 70%;
+  }
+}
