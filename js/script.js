@@ -18,6 +18,7 @@ var documentDateOptions = document.querySelector('#data-dokumentu'),
 // View elements variables
 var vacationTermFrom = document.querySelector('#vacation-term-from'),
     vacationTermTo = document.querySelector('#vacation-term-to'),
+    abnormalTitle = document.querySelector('#abnormal-title');
     data = document.querySelector('#aktualna-data');
 
     function leadingZero(i) {
@@ -43,6 +44,9 @@ vacationTermToOptions.value = `${specialDataFormat}`;
 
 // Setting value of date on view
 data.value = `Stalowa Wola, ${dataNow} r.`;
+
+// Setting abnormal vacation title
+abnormalTitle.value = `zawarcia związku małżeńskiego w dniu ${dataNow} r.`;
 
 // Print action
 buttonPrint.addEventListener('click', function(){

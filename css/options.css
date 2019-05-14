@@ -13,6 +13,9 @@
   -moz-box-shadow: -10px 0px 36px -16px black;
   box-shadow: -10px 0px 36px -16px black;
 }
+#options input {
+  font-weight: 600;
+}
 
 .radio {
   font-size: 0.9em;

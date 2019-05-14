@@ -421,6 +421,10 @@
     display: none;
   }
 
+  #abnormal-title {
+    font-weight: normal;
+  }
+
   body {
     margin: 1.3cm;
   }
