@@ -9,4 +9,4 @@ Książka adresowa z wykorzystaniem bazy Firebase do zapisywania kontaktów.
 1. git clone https://github.com/pkrason/pkrason.github.io.git
 2. cd kontakty
 3. npm install
-4. ng serve
+4. ng serve --open
