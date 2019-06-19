@@ -1,0 +1,111 @@
+@mixin shadow($x, $y, $blur, $spread, $color) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+
+#options {
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 9999;
+  color: white;
+  float: right;
+  width: 25%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 40px 28px;
+  background-color: #333333;
+  height: 100vh;
+  @include shadow(-10px, 0px, 36px, -16px, black);
+  input {
+    font-weight: 600;
+  }
+}
+
+.radio {
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.vacation-time-container {
+  margin-top: 5px;
+}
+
+p {
+  margin: 0;
+}
+
+.invisibility {
+  display: none;
+  visibility: hidden;
+}
+
+.options-form-elements {
+  width: 140px;
+  padding: 4px 6px;
+  color: #161616;
+  font-size: 0.8em;
+}
+
+.btn {
+  cursor: pointer;
+  min-width: 120px;
+  height: 35px;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(60, 128, 255);
+  border-radius: 4px;
+  transition: all 0.3s;
+  border: none;
+  user-select: none;
+  @include shadow(7px, 15px, 61px, -21px, rgba(0, 0, 0, 0.66));
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  background-color: rgb(25, 106, 255);
+}
+
+.btn:active {
+  @include shadow(7px, 15px, 61px, -14px, rgba(0, 0, 0, 0.66));
+}
+
+.print-btn {
+  margin-top: 50px;
+  float: right;
+}
+
+.term-label {
+  font-size: 0.8em;
+}
+
+.custom-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.8em;
+}
+
+#options-form {
+  text-align: right;
+}
+
+option:disabled {
+  color: #aaa;
+}
+
+#imie-nazwisko {
+  font-weight: 600;
+  padding: 6px 7px;
+}
+
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1600px) {
+  #options {
+    width: 25%;
+  }
+}
