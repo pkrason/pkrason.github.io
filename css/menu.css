@@ -1,103 +1,114 @@
 html {
-    height:100%;
-    user-select: none;
+  height: 100%;
+  user-select: none;
 }
 
 body {
-    background-color: #333333;  
+  background-color: #333333;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100px 300px;
+  justify-items: center;
+  align-items: center;
+  height: 400px;
+  width:800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -280px;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .header-big {
-    /* position: absolute;
-    top: 22%;
-    left: 50%;
-    margin-left: -156px; */
-    display: block;
-    text-align: center;
-    font-size: 38px;
-    font-weight: 600;
-    color: #ffffff;
-    font-family: 'Titillium Web', Arial, sans-serif;
-    margin-top:200px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Titillium Web", Arial, sans-serif;
 }
 
 .header-small {
-    /* position: absolute;
-    top: 28%;
-    left: 50%;
-    margin-left: -95px; */
-    display: block;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 300;
-    color: #ffffff;
-    font-family: 'Titillium Web', Arial, sans-serif;
-    opacity: 0.4;
-}
-
-#container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:40vh;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  font-family: "Titillium Web", Arial, sans-serif;
+  opacity: 0.4;
 }
 
 .menu-item {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 165px;
-    height: 225px;
-    border-radius: 4px;
-    background: #eeeeee; /* Old browsers */
-    background: -moz-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #eeeeee 0%,#aaaaaa 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #eeeeee 0%,#aaaaaa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    /* background-color: rgb(233, 233, 233); */
-    margin: 7px;
-    text-align: center;
-    -webkit-box-shadow: 0px 6px 17px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 6px 17px -5px rgba(0,0,0,0.75);
-    box-shadow: 0px 6px 17px -5px rgba(0,0,0,0.75);
-    transition: all .3s ease-in-out;
-    z-index: 1;
-    border:2px solid #eeeeee;
-    line-height: 16px;
+  display: inline-grid;
+  position: relative;
+  cursor: pointer;
+  width: 165px;
+  height: 225px;
+  border-radius: 4px;
+  background: #eeeeee; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #eeeeee 0%,
+    #aaaaaa 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #eeeeee 0%,
+    #aaaaaa 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #eeeeee 0%,
+    #aaaaaa 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* background-color: rgb(233, 233, 233); */
+  margin: 7px;
+  text-align: center;
+  -webkit-box-shadow: 0px 6px 17px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 17px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 17px -5px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  border: 2px solid #eeeeee;
+  line-height: 16px;
 }
 
 .menu-item:after {
-    content: '';
-    border-radius: 4px;
-    background-image: linear-gradient(to bottom, #ffffff, #cccccc);
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height:100%;
-    opacity: 0;
-    transition: all .3s ease-in-out;
+  content: "";
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, #ffffff, #cccccc);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-item:hover:after {
-    opacity: 1;
+  opacity: 1;
 }
 
 .menu-item a {
-    font-family: 'Titillium Web', Arial, sans-serif;
-    font-size: 14px;
-    font-weight:700;
-    text-decoration: none;
-    color: #545454;
-    z-index: 3;
+  font-family: "Titillium Web", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #545454;
+  z-index: 3;
 }
 
 .menu-item img {
-    padding:1px;
-    max-width: 65px;
-    display: block;
-    margin: 60px auto 7px;
-    z-index: 3;
-    border:3px solid #eeeeee;
-    border-radius: 50%;
+  padding: 1px;
+  max-width: 65px;
+  display: block;
+  margin: 60px auto 7px;
+  z-index: 3;
+  border: 3px solid #eeeeee;
+  border-radius: 50%;
 }

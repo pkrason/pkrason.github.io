@@ -1,13 +1,15 @@
 // For every menu item - on click - open the exact document
-let divs = document.querySelector('#container');
-divs.addEventListener("click", openDocument, false);
+const divs = document.querySelector(".grid-menu");
 
 function openDocument(e) {
-    if (e.target !== e.currentTarget) {
+  if (e.target !== e.currentTarget) {
+    let clickedItem = e.target.querySelector("a");
 
-        let clickedItem = e.target.querySelector('a');
-    
-        location.reload();location.href = clickedItem;
-    }
-    e.stopPropagation();
+    location.reload();
+    location.href = clickedItem;
+  }
+  e.stopPropagation();
 }
+
+    divs.addEventListener("click", openDocument, false);
+

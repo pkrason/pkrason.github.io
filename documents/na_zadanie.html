@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Urlop na żądanie</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -43,7 +44,7 @@
 
     <div id="view-container">
       <div id="podglad">
-        <div id="dane-firmy">
+        <div id="company-informations">
           <h4>I-BS.PL Sp. z o. o.</h4>
           <p>
             Solidarności 2A<br />
@@ -63,27 +64,25 @@
 
         <div style="clear:both"></div>
 
-        <div id="dane-pracownika">
-          <p class="margin-paragraph">
-            Imię i nazwisko:
-            <input
-              id="worker"
-              type="text"
-              class="pole-do-wypelnienia"
-              placeholder="Piotr Krasoń"
-            />
-          </p>
+        <div id="request-informations">
+          Imię i nazwisko:
+          <input
+            id="worker"
+            type="text"
+            class="pole-do-wypelnienia"
+            placeholder="Piotr Krasoń"
+          />
           <p class="margin-paragraph">
             Proszę o udzielenie
-            <span class="bold">urlopu wypoczynkowego na żądanie </span>w
-            dniu <span id="vacation-day" class="bold"></span
+            <span class="bold">urlopu wypoczynkowego na żądanie </span>w dniu
+            <span id="vacation-day" class="bold"></span
             ><span class="bold"></span>
           </p>
           <p>
             Jednocześnie oświadczam, że jest to
             <span class="bold">1 dzień</span> urlopu wypoczynkowego w
-            <span class="bold">2019 roku</span>, udzielenia którego
-            żądam na podstawie art. 167² K.p.
+            <span class="bold">2019 roku</span>, udzielenia którego żądam na
+            podstawie art. 167² K.p.
           </p>
         </div>
         <div style="clear:both"></div>
@@ -109,6 +108,7 @@
     </div>
 
     <div id="options" class="noprint">
+      <p class="options-header">Ustawienia wniosku</p>
       <form action="#" id="options-form">
         <label for="data-dokumentu" class="custom-label">Data dokumentu</label>
         <input

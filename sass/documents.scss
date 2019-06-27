@@ -1,5 +1,4 @@
 @import "reset";
-@import "documents_views/opieka";
 
 $view-font: "Times New Roman", Times, serif;
 
@@ -30,6 +29,10 @@ input::placeholder {
   font-size: 12px;
 }
 
+.margin-paragraph {
+  margin: 15px 0;
+}
+
 #podglad {
   font-family: $view-font;
   box-sizing: border-box;
@@ -42,7 +45,7 @@ input::placeholder {
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.19);
 }
 
-#company {
+#company-informations {
   text-align: left;
   float: left;
   line-height: 18px;
@@ -156,7 +159,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1620px) {
   #options {
     width: 30%;
   }
