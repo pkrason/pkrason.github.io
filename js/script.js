@@ -1,8 +1,3 @@
-// Przebudować na klasy i obiekty
-// Dodać obsługę dni +1 i +2
-// Zrobić wniosek o urlop okolicznościowy
-// Oddzielić główny css od poszczególnych wniosków
-
 // Options elements variables
 var documentDateOptions = document.querySelector("#data-dokumentu"),
   nameSurnameOptions = document.querySelector("#imie-nazwisko"),
